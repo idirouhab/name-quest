@@ -1194,12 +1194,15 @@
     // Check for returning player based on localStorage
     async function checkForReturningPlayer() {
         const lastPlayerName = getLastPlayerName();
+        console.log('Checking for returning player:', lastPlayerName);
 
         if (lastPlayerName) {
             // Check with server if this player has any evaluated names
             loadingSpinner.classList.add('active');
             const evaluatedNames = await fetchEvaluatedNames(lastPlayerName);
             loadingSpinner.classList.remove('active');
+
+            console.log('Evaluated names count:', evaluatedNames.length);
 
             if (evaluatedNames.length > 0) {
                 // Player has started - show returning player section
@@ -1211,14 +1214,17 @@
 
                 newPlayerSection.style.display = 'none';
                 returningPlayerSection.style.display = 'block';
+                console.log('Showing returning player section');
             } else {
                 // Player name exists but no evaluations yet - show new player form
+                console.log('Player has no evaluations, pre-filling name');
                 playerNameInput.value = lastPlayerName;
                 newPlayerSection.style.display = 'block';
                 returningPlayerSection.style.display = 'none';
             }
         } else {
             // No previous player - show new player form
+            console.log('No previous player found');
             newPlayerSection.style.display = 'block';
             returningPlayerSection.style.display = 'none';
         }
