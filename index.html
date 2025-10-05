@@ -37,7 +37,6 @@
             background: #0a0a0a;
         }
 
-        /* Animated gradient background */
         .bg-container {
             position: fixed;
             inset: 0;
@@ -47,18 +46,11 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% {
-                transform: rotate(0deg) scale(1.2);
-            }
-            33% {
-                transform: rotate(120deg) scale(1.3);
-            }
-            66% {
-                transform: rotate(240deg) scale(1.2);
-            }
+            0%, 100% { transform: rotate(0deg) scale(1.2); }
+            33% { transform: rotate(120deg) scale(1.3); }
+            66% { transform: rotate(240deg) scale(1.2); }
         }
 
-        /* Floating particles */
         .particles {
             position: fixed;
             inset: 0;
@@ -76,20 +68,10 @@
         }
 
         @keyframes float {
-            from {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
+            from { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            to { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
         }
 
         .container {
@@ -102,7 +84,6 @@
             padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
         }
 
-        /* Header with premium logo */
         .header {
             text-align: center;
             padding: 30px 20px 20px;
@@ -117,14 +98,8 @@
         }
 
         @keyframes logoEntrance {
-            from {
-                opacity: 0;
-                transform: scale(0.5) rotate(-10deg);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) rotate(0);
-            }
+            from { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+            to { opacity: 1; transform: scale(1) rotate(0); }
         }
 
         .logo-icon {
@@ -141,12 +116,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .logo-text {
@@ -157,7 +128,6 @@
             text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
         }
 
-        /* Premium stats display */
         .stats-container {
             margin: 0 20px 20px;
             display: grid;
@@ -195,12 +165,8 @@
         }
 
         @keyframes shimmer {
-            0%, 100% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(180deg);
-            }
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
         }
 
         .stat-icon {
@@ -210,25 +176,13 @@
             animation: bounce 2s ease-in-out infinite;
         }
 
-        .stat-card:nth-child(1) .stat-icon {
-            animation-delay: 0s;
-        }
-
-        .stat-card:nth-child(2) .stat-icon {
-            animation-delay: 0.2s;
-        }
-
-        .stat-card:nth-child(3) .stat-icon {
-            animation-delay: 0.4s;
-        }
+        .stat-card:nth-child(1) .stat-icon { animation-delay: 0s; }
+        .stat-card:nth-child(2) .stat-icon { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) .stat-icon { animation-delay: 0.4s; }
 
         @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
         .stat-value {
@@ -250,7 +204,6 @@
             margin-top: 3px;
         }
 
-        /* Ultra premium progress bar */
         .progress-container {
             margin: 0 20px 25px;
             position: relative;
@@ -285,12 +238,8 @@
         }
 
         @keyframes progressShine {
-            0% {
-                transform: translateX(-100px);
-            }
-            100% {
-                transform: translateX(100px);
-            }
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(100px); }
         }
 
         .progress-percentage {
@@ -302,7 +251,6 @@
             font-weight: 600;
         }
 
-        /* Main card with swipe animations */
         .card-container {
             flex: 1;
             display: flex;
@@ -327,37 +275,23 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
             transform-style: preserve-3d;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: grab;
         }
 
-        .name-card:active {
-            cursor: grabbing;
-        }
+        .name-card:active { cursor: grabbing; }
 
-        .name-card.swipe-left {
-            animation: swipeLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .name-card.swipe-right {
-            animation: swipeRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .name-card.swipe-left { animation: swipeLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .name-card.swipe-right { animation: swipeRight 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 
         @keyframes swipeLeft {
-            to {
-                transform: translateX(-150%) rotate(-30deg);
-                opacity: 0;
-            }
+            to { transform: translateX(-150%) rotate(-30deg); opacity: 0; }
         }
 
         @keyframes swipeRight {
-            to {
-                transform: translateX(150%) rotate(30deg);
-                opacity: 0;
-            }
+            to { transform: translateX(150%) rotate(30deg); opacity: 0; }
         }
 
         .card-glow {
@@ -370,14 +304,10 @@
             transition: opacity 0.3s;
         }
 
-        .name-card:hover .card-glow {
-            opacity: 0.5;
-        }
+        .name-card:hover .card-glow { opacity: 0.5; }
 
         @keyframes glowRotate {
-            to {
-                transform: rotate(360deg);
-            }
+            to { transform: rotate(360deg); }
         }
 
         .name-text {
@@ -397,17 +327,10 @@
         }
 
         @keyframes nameEntrance {
-            from {
-                opacity: 0;
-                transform: scale(0.8) rotateX(90deg);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) rotateX(0);
-            }
+            from { opacity: 0; transform: scale(0.8) rotateX(90deg); }
+            to { opacity: 1; transform: scale(1) rotateX(0); }
         }
 
-        /* Premium action buttons */
         .action-buttons {
             display: flex;
             gap: 20px;
@@ -443,9 +366,7 @@
             mask-composite: exclude;
         }
 
-        .action-btn:active {
-            transform: scale(0.9);
-        }
+        .action-btn:active { transform: scale(0.9); }
 
         .btn-dislike {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -477,7 +398,6 @@
             box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
         }
 
-        /* Results screen */
         .results {
             display: none;
             flex-direction: column;
@@ -486,19 +406,11 @@
             animation: resultsEntrance 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .results.active {
-            display: flex;
-        }
+        .results.active { display: flex; }
 
         @keyframes resultsEntrance {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .results-header {
@@ -513,12 +425,8 @@
         }
 
         @keyframes trophyBounce {
-            from {
-                transform: scale(0) rotate(-180deg);
-            }
-            to {
-                transform: scale(1) rotate(0);
-            }
+            from { transform: scale(0) rotate(-180deg); }
+            to { transform: scale(1) rotate(0); }
         }
 
         .results-title {
@@ -562,9 +470,7 @@
             transition: transform 0.6s;
         }
 
-        .final-stat-card:hover::before {
-            transform: translateX(100%);
-        }
+        .final-stat-card:hover::before { transform: translateX(100%); }
 
         .final-stat-value {
             font-size: 3em;
@@ -606,15 +512,11 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .liked-names-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
-
+        .liked-names-scroll::-webkit-scrollbar { width: 6px; }
         .liked-names-scroll::-webkit-scrollbar-track {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 3px;
         }
-
         .liked-names-scroll::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 3px;
@@ -643,14 +545,8 @@
         }
 
         @keyframes pillEntry {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .export-buttons {
@@ -688,13 +584,8 @@
             transition: left 0.5s;
         }
 
-        .export-btn:hover::before {
-            left: 100%;
-        }
-
-        .export-btn:active {
-            transform: scale(0.95);
-        }
+        .export-btn:hover::before { left: 100%; }
+        .export-btn:active { transform: scale(0.95); }
 
         .btn-copy-export {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -714,7 +605,6 @@
             box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
         }
 
-        /* Loading animation */
         .loading-spinner {
             display: none;
             position: fixed;
@@ -723,11 +613,10 @@
             transform: translate(-50%, -50%);
             width: 60px;
             height: 60px;
+            z-index: 1000;
         }
 
-        .loading-spinner.active {
-            display: block;
-        }
+        .loading-spinner.active { display: block; }
 
         .spinner-ring {
             width: 100%;
@@ -739,12 +628,9 @@
         }
 
         @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
+            to { transform: rotate(360deg); }
         }
 
-        /* Welcome screen */
         .welcome-screen {
             display: flex;
             flex-direction: column;
@@ -755,9 +641,7 @@
             text-align: center;
         }
 
-        .welcome-screen.hidden {
-            display: none;
-        }
+        .welcome-screen.hidden { display: none; }
 
         .welcome-logo {
             font-size: 5em;
@@ -766,12 +650,8 @@
         }
 
         @keyframes logoFloat {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
 
         .welcome-title {
@@ -813,9 +693,7 @@
             outline: none;
         }
 
-        .player-input::placeholder {
-            color: rgba(255, 255, 255, 0.4);
-        }
+        .player-input::placeholder { color: rgba(255, 255, 255, 0.4); }
 
         .player-input:focus {
             border-color: #f5576c;
@@ -844,9 +722,7 @@
             box-shadow: 0 15px 50px rgba(245, 87, 108, 0.6);
         }
 
-        .start-button:active {
-            transform: translateY(0);
-        }
+        .start-button:active { transform: translateY(0); }
 
         .start-button:disabled {
             opacity: 0.5;
@@ -935,18 +811,14 @@
             transform: translateY(-2px);
         }
 
-        /* Game view */
         .game-view {
             display: flex;
             flex-direction: column;
             height: 100vh;
         }
 
-        .game-view.hidden {
-            display: none;
-        }
+        .game-view.hidden { display: none; }
 
-        /* Current player indicator */
         .current-player {
             position: absolute;
             top: 10px;
@@ -960,11 +832,8 @@
             font-weight: 600;
         }
 
-        /* Confetti animation */
         @keyframes confetti-fall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-            }
+            to { transform: translateY(100vh) rotate(360deg); }
         }
 
         .confetti {
@@ -976,27 +845,39 @@
             animation: confetti-fall 3s linear;
         }
 
-        /* Mobile responsiveness */
+        .toast {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(245, 87, 108, 0.9);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 20px;
+            font-weight: 600;
+            z-index: 1000;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateX(-50%) translateY(-20px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         @media (max-width: 480px) {
-            .name-text {
-                font-size: 2.5em;
-            }
-
-            .action-btn {
-                width: 70px;
-                height: 70px;
-            }
-
-            .btn-super-like {
-                width: 50px;
-                height: 50px;
-            }
+            .name-text { font-size: 2.5em; }
+            .action-btn { width: 70px; height: 70px; }
+            .btn-super-like { width: 50px; height: 50px; }
         }
     </style>
 </head>
 <body>
 <div class="bg-container"></div>
-
 <div class="particles" id="particles"></div>
 
 <div class="container">
@@ -1006,16 +887,8 @@
         <p class="welcome-subtitle">Discover your favorite names</p>
 
         <div class="player-input-container" id="newPlayerSection">
-            <input
-                    type="text"
-                    id="playerNameInput"
-                    class="player-input"
-                    placeholder="Enter your name..."
-                    maxlength="20"
-            />
-            <button class="start-button" id="startButton">
-                Start Journey
-            </button>
+            <input type="text" id="playerNameInput" class="player-input" placeholder="Enter your name..." maxlength="20"/>
+            <button class="start-button" id="startButton">Start Journey</button>
         </div>
 
         <div class="returning-player" id="returningPlayerSection" style="display: none;">
@@ -1036,12 +909,8 @@
                 </div>
             </div>
             <div class="button-group">
-                <button class="continue-button" id="continueButton">
-                    Continue
-                </button>
-                <button class="new-player-button" id="newPlayerButton">
-                    New Player
-                </button>
+                <button class="continue-button" id="continueButton">Continue</button>
+                <button class="new-player-button" id="newPlayerButton">New Player</button>
             </div>
         </div>
     </div>
@@ -1088,15 +957,9 @@
         </div>
 
         <div class="action-buttons">
-            <button class="action-btn btn-dislike" id="btnDislike">
-                👋
-            </button>
-            <button class="action-btn btn-super-like" id="btnSuperLike">
-                ⭐
-            </button>
-            <button class="action-btn btn-like" id="btnLike">
-                💖
-            </button>
+            <button class="action-btn btn-dislike" id="btnDislike">👋</button>
+            <button class="action-btn btn-super-like" id="btnSuperLike">⭐</button>
+            <button class="action-btn btn-like" id="btnLike">💖</button>
         </div>
     </div>
 
@@ -1123,15 +986,9 @@
         </div>
 
         <div class="export-buttons">
-            <button class="export-btn btn-copy-export" id="btnCopy">
-                📋 Copy to Clipboard
-            </button>
-            <button class="export-btn btn-csv-export" id="btnExport">
-                📊 Export CSV
-            </button>
-            <button class="export-btn btn-restart-game" id="btnRestart">
-                🔄 New Game
-            </button>
+            <button class="export-btn btn-copy-export" id="btnCopy">📋 Copy to Clipboard</button>
+            <button class="export-btn btn-csv-export" id="btnExport">📊 Export CSV</button>
+            <button class="export-btn btn-restart-game" id="btnRestart">🔄 New Game</button>
         </div>
     </div>
 </div>
@@ -1141,7 +998,6 @@
 </div>
 
 <script>
-    // Create floating particles
     function createParticles() {
         const container = document.getElementById('particles');
         for (let i = 0; i < 20; i++) {
@@ -1154,16 +1010,18 @@
         }
     }
 
-    // Game state
+    // Game state - FIXED: Added evaluatedNamesCount tracker
     let names = [];
-    let totalNames = 0; // Total original de nombres
+    let totalNames = 0;
     let currentIndex = 0;
     let likedNames = [];
     let dislikedNames = [];
     let superLikedNames = [];
     let currentPlayer = null;
+    let evaluatedNamesCount = 0; // NEW: Track how many were already evaluated
+    let previousLikesCount = 0; // Track previous likes
+    let previousPassedCount = 0; // Track previous passed
 
-    // DOM elements
     const welcomeScreen = document.getElementById('welcomeScreen');
     const gameView = document.getElementById('gameView');
     const resultsView = document.getElementById('resultsView');
@@ -1193,8 +1051,9 @@
     const btnSuperLike = document.getElementById('btnSuperLike');
     const btnRestart = document.getElementById('btnRestart');
     const loadingSpinner = document.getElementById('loadingSpinner');
+    const btnCopy = document.getElementById('btnCopy');
+    const btnExport = document.getElementById('btnExport');
 
-    // Player management - only store last playerName in localStorage
     function getLastPlayerName() {
         return localStorage.getItem('lastPlayerName');
     }
@@ -1207,7 +1066,19 @@
         localStorage.removeItem('lastPlayerName');
     }
 
-    // Load names from file
+    // NEW: Toast notification function
+    function showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = 'slideUp 0.3s ease reverse';
+            setTimeout(() => toast.remove(), 300);
+        }, 2500);
+    }
+
     async function loadNames() {
         try {
             loadingSpinner.classList.add('active');
@@ -1219,34 +1090,27 @@
                 names = ['Emma'];
             }
 
-            totalNames = names.length; // Guardar el total original
-
+            totalNames = names.length;
             loadingSpinner.classList.remove('active');
             checkForReturningPlayer();
         } catch (error) {
             console.error('Error loading names:', error);
             names = ['Emma', 'Oliver', 'Sophia', 'Lucas', 'Isabella', 'Mason', 'Mia', 'Ethan', 'Charlotte', 'Noah'];
-            totalNames = names.length; // Guardar el total original
+            totalNames = names.length;
             loadingSpinner.classList.remove('active');
             checkForReturningPlayer();
         }
     }
 
-    // Check for returning player based on localStorage
     async function checkForReturningPlayer() {
         const lastPlayerName = getLastPlayerName();
-        console.log('Checking for returning player:', lastPlayerName);
 
         if (lastPlayerName) {
-            // Check with server if this player has any evaluated names
             loadingSpinner.classList.add('active');
             const evaluatedNames = await fetchEvaluatedNames(lastPlayerName);
             loadingSpinner.classList.remove('active');
 
-            console.log('Evaluated names count:', evaluatedNames.length);
-
             if (evaluatedNames.length > 0) {
-                // Player has started - show returning player section
                 returningPlayerName.textContent = lastPlayerName;
                 const progress = Math.round((evaluatedNames.length / totalNames) * 100);
                 returnProgress.textContent = progress + '%';
@@ -1255,40 +1119,30 @@
 
                 newPlayerSection.style.display = 'none';
                 returningPlayerSection.style.display = 'block';
-                console.log('Showing returning player section');
             } else {
-                // Player name exists but no evaluations yet - show new player form
-                console.log('Player has no evaluations, pre-filling name');
                 playerNameInput.value = lastPlayerName;
                 newPlayerSection.style.display = 'block';
                 returningPlayerSection.style.display = 'none';
             }
         } else {
-            // No previous player - show new player form
-            console.log('No previous player found');
             newPlayerSection.style.display = 'block';
             returningPlayerSection.style.display = 'none';
         }
     }
 
-    // Fetch evaluated names from server
     async function fetchEvaluatedNames(playerName) {
         const checkUrl = `https://idir-test.app.n8n.cloud/webhook/check?playerName=${encodeURIComponent(playerName)}`;
 
         try {
             const response = await fetch(checkUrl, {
                 method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
+                headers: {'Content-Type': 'application/json'}
             });
 
             if (response.ok) {
                 const data = await response.json();
-                console.log('Evaluated names from server:', data);
                 return data.data || [];
             } else {
-                console.warn('Could not fetch evaluated names from server');
                 return [];
             }
         } catch (error) {
@@ -1297,18 +1151,13 @@
         }
     }
 
-    // Filter out already evaluated names
     function filterEvaluatedNames(evaluatedNames) {
         if (!evaluatedNames || evaluatedNames.length === 0) {
             return names;
         }
 
-        // Extract the name from the evaluated data (each entry has {name, choice})
         const evaluatedSet = new Set(evaluatedNames.map(e => e.name.toLowerCase().trim()));
-
-        const filteredNames = names.filter(name =>
-            !evaluatedSet.has(name.toLowerCase().trim())
-        );
+        const filteredNames = names.filter(name => !evaluatedSet.has(name.toLowerCase().trim()));
 
         console.log(`Filtered ${names.length - filteredNames.length} already evaluated names`);
         console.log(`Remaining names: ${filteredNames.length}`);
@@ -1316,40 +1165,41 @@
         return filteredNames;
     }
 
-    // Start game with player
+    // FIXED: startGame now tracks evaluatedNamesCount properly
     async function startGame(playerName) {
         currentPlayer = playerName;
         currentPlayerNameEl.textContent = '👤 ' + playerName;
-
-        // Save player name to localStorage
         setLastPlayerName(playerName);
 
-        // Show loading
         loadingSpinner.classList.add('active');
-
-        // Fetch evaluated names from server
         const evaluatedNames = await fetchEvaluatedNames(playerName);
 
-        // Reset game state
         currentIndex = 0;
         likedNames = [];
         dislikedNames = [];
         superLikedNames = [];
 
-        // Load previous choices from evaluated names
+        // Store previously evaluated counts (but don't add them to the arrays)
+        previousLikesCount = 0;
+        previousPassedCount = 0;
+
         if (evaluatedNames.length > 0) {
+            // Count previous evaluations but don't add to current session arrays
             evaluatedNames.forEach(evaluated => {
                 if (evaluated.choice === true) {
-                    // Check if it was a super like (if you have rating info from API)
-                    // For now, just add to likedNames
-                    likedNames.push(evaluated.name);
+                    previousLikesCount++;
                 } else if (evaluated.choice === false) {
-                    dislikedNames.push(evaluated.name);
+                    previousPassedCount++;
                 }
             });
 
-            // Filter out evaluated names from the list to show
+            evaluatedNamesCount = evaluatedNames.length; // Total already evaluated
             names = filterEvaluatedNames(evaluatedNames);
+
+            // NEW: Show continuation toast
+            showToast(`Continuando desde ${evaluatedNames.length} nombres evaluados`);
+        } else {
+            evaluatedNamesCount = 0;
         }
 
         loadingSpinner.classList.remove('active');
@@ -1359,7 +1209,6 @@
         showCurrentName();
     }
 
-    // Send choice to webhook
     async function sendChoiceToWebhook(nameTested, choice, rating = 'normal') {
         if (!currentPlayer) return;
 
@@ -1367,40 +1216,26 @@
         const payload = {
             playerName: currentPlayer,
             name: nameTested,
-            choice: choice, // true for like, false for dislike
-            rating: rating, // 'super', 'normal', or 'dislike'
+            choice: choice,
+            rating: rating,
             timestamp: new Date().toISOString()
         };
 
         try {
             await fetch(webhookUrl, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload)
             });
-            console.log('Choice sent to webhook:', payload);
         } catch (error) {
             console.error('Error sending to webhook:', error);
-            // Continue anyway, don't block the user experience
         }
     }
 
-    // No localStorage - state managed by server
-
-    // Initialize game
-    function initGame() {
-        updateStats();
-        showCurrentName();
-    }
-
-    // Show current name with animation
     function showCurrentName() {
         if (currentIndex < names.length) {
-            // Reset card animation
             nameCard.classList.remove('swipe-left', 'swipe-right');
-            void nameCard.offsetWidth; // Force reflow
+            void nameCard.offsetWidth;
 
             currentNameEl.style.animation = 'none';
             void currentNameEl.offsetWidth;
@@ -1413,14 +1248,19 @@
         }
     }
 
-    // Update statistics
+    // FIXED: updateStats now accounts for previously evaluated names
     function updateStats() {
-        const totalLiked = likedNames.length + superLikedNames.length;
-        const totalEvaluated = totalLiked + dislikedNames.length;
+        const sessionLiked = likedNames.length + superLikedNames.length;
+        const sessionDisliked = dislikedNames.length;
+        const sessionEvaluated = sessionLiked + sessionDisliked;
+
+        const totalLiked = previousLikesCount + sessionLiked;
+        const totalPassed = previousPassedCount + sessionDisliked;
+        const totalEvaluated = evaluatedNamesCount + sessionEvaluated;
         const remaining = totalNames - totalEvaluated;
 
         likedCountEl.textContent = totalLiked;
-        dislikedCountEl.textContent = dislikedNames.length;
+        dislikedCountEl.textContent = totalPassed;
         remainingCountEl.textContent = remaining;
 
         const progress = (totalEvaluated / totalNames) * 100;
@@ -1428,45 +1268,33 @@
         progressPercentageEl.textContent = Math.round(progress) + '%';
     }
 
-    // Handle like with animation
     async function handleLike() {
         if (currentIndex < names.length) {
             const currentName = names[currentIndex];
             likedNames.push(currentName);
-
-            // Send to webhook
             await sendChoiceToWebhook(currentName, true, 'normal');
-
             animateCard('right');
             currentIndex++;
             setTimeout(showCurrentName, 300);
         }
     }
 
-    // Handle dislike with animation
     async function handleDislike() {
         if (currentIndex < names.length) {
             const currentName = names[currentIndex];
             dislikedNames.push(currentName);
-
-            // Send to webhook
             await sendChoiceToWebhook(currentName, false, 'dislike');
-
             animateCard('left');
             currentIndex++;
             setTimeout(showCurrentName, 300);
         }
     }
 
-    // Handle super like
     async function handleSuperLike() {
         if (currentIndex < names.length) {
             const currentName = names[currentIndex];
             superLikedNames.push(currentName);
-
-            // Send to webhook
             await sendChoiceToWebhook(currentName, true, 'super');
-
             createConfetti();
             animateCard('right');
             currentIndex++;
@@ -1474,12 +1302,10 @@
         }
     }
 
-    // Animate card swipe
     function animateCard(direction) {
         nameCard.classList.add(`swipe-${direction}`);
     }
 
-    // Create confetti effect
     function createConfetti() {
         for (let i = 0; i < 20; i++) {
             const confetti = document.createElement('div');
@@ -1488,12 +1314,10 @@
             confetti.style.top = '-10px';
             confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
             document.body.appendChild(confetti);
-
             setTimeout(() => confetti.remove(), 3000);
         }
     }
 
-    // Show results
     function showResults() {
         gameView.classList.add('hidden');
         resultsView.classList.add('active');
@@ -1502,30 +1326,33 @@
         finalLikedCountEl.textContent = totalLiked.length;
         finalDislikedCountEl.textContent = dislikedNames.length;
 
-        // Display liked names as pills
         if (totalLiked.length > 0) {
             likedNamesListEl.innerHTML = totalLiked.map((name, index) => {
                 const isSuperLiked = superLikedNames.includes(name);
                 return `<span class="name-pill" style="animation-delay: ${index * 0.05}s">
-                        ${isSuperLiked ? '⭐' : '💖'} ${name}
-                    </span>`;
+                    ${isSuperLiked ? '⭐' : '💖'} ${name}
+                </span>`;
             }).join('');
         } else {
             likedNamesListEl.innerHTML = '<div style="text-align: center; color: rgba(255,255,255,0.5); padding: 40px;">No names selected 😢</div>';
         }
 
-        // Celebration confetti
         setTimeout(createConfetti, 500);
     }
 
-    // Restart game
+    // IMPROVED: Better restart function with clearer options
     function restart() {
-        if (confirm('Start a new session? You can enter a different player name.')) {
+        const newSession = confirm('¿Empezar una nueva sesión?\n\nOK = Nueva sesión (puedes cambiar de jugador)\nCancelar = Quedarse en resultados');
+
+        if (newSession) {
             currentPlayer = null;
             currentIndex = 0;
             likedNames = [];
             dislikedNames = [];
             superLikedNames = [];
+            evaluatedNamesCount = 0;
+            previousLikesCount = 0;
+            previousPassedCount = 0;
 
             gameView.classList.add('hidden');
             resultsView.classList.remove('active');
@@ -1535,7 +1362,6 @@
         }
     }
 
-    // Export to CSV
     function exportToCSV() {
         const csv = ['Name,Status,Rating,Timestamp'];
 
@@ -1561,14 +1387,12 @@
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
 
-        // Visual feedback
         btnExport.textContent = '✅ Downloaded!';
         setTimeout(() => {
             btnExport.innerHTML = '📊 Export CSV';
         }, 2000);
     }
 
-    // Copy to clipboard
     async function copyToClipboard() {
         const allLiked = [...superLikedNames.map(n => `⭐ ${n}`), ...likedNames.map(n => `💖 ${n}`)];
         const text = allLiked.join('\n');
@@ -1580,7 +1404,6 @@
                 btnCopy.innerHTML = '📋 Copy to Clipboard';
             }, 2000);
         } catch (err) {
-            // Fallback
             const textarea = document.createElement('textarea');
             textarea.value = text;
             document.body.appendChild(textarea);
@@ -1595,7 +1418,6 @@
         }
     }
 
-    // Touch/swipe support for mobile
     let touchStartX = null;
     let touchStartY = null;
 
@@ -1609,7 +1431,6 @@
 
         const touchEndX = e.touches[0].clientX;
         const touchEndY = e.touches[0].clientY;
-
         const diffX = touchStartX - touchEndX;
         const diffY = touchStartY - touchEndY;
 
@@ -1640,15 +1461,13 @@
         touchStartY = null;
     });
 
-    // Welcome screen event listeners
     playerNameInput.addEventListener('input', () => {
         startButton.disabled = playerNameInput.value.trim().length === 0;
     });
 
     playerNameInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && playerNameInput.value.trim().length > 0) {
-            const playerName = playerNameInput.value.trim();
-            startGame(playerName);
+            startGame(playerNameInput.value.trim());
         }
     });
 
@@ -1674,10 +1493,6 @@
         playerNameInput.focus();
     });
 
-    // Game event listeners
-    const btnCopy = document.getElementById('btnCopy');
-    const btnExport = document.getElementById('btnExport');
-
     btnLike.addEventListener('click', handleLike);
     btnDislike.addEventListener('click', handleDislike);
     btnSuperLike.addEventListener('click', handleSuperLike);
@@ -1685,7 +1500,6 @@
     btnCopy.addEventListener('click', copyToClipboard);
     btnExport.addEventListener('click', exportToCSV);
 
-    // Keyboard shortcuts
     document.addEventListener('keydown', (e) => {
         if (gameView.classList.contains('hidden')) return;
 
@@ -1708,7 +1522,6 @@
         }
     });
 
-    // Initialize
     createParticles();
     loadNames();
 </script>
